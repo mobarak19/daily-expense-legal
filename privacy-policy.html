@@ -1,373 +1,214 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy — DailyExpences</title>
-<style>
-  :root{
-    --ink:#14171f;
-    --muted:#6b7280;
-    --faint:#9aa1ae;
-    --paper:#f5f6fb;
-    --card:#ffffff;
-    --border:#e6e8f0;
-    --indigo:#4a59fa;
-    --violet:#8c59fa;
-    --indigo-soft:#eef0ff;
-    --radius:20px;
-  }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} *{animation:none !important; transition:none !important;} }
-
-  body{
-    margin:0;
-    background:var(--paper);
-    color:var(--ink);
-    font-family:-apple-system,BlinkMacSystemFont,"Inter","Segoe UI",Helvetica,Arial,sans-serif;
-    line-height:1.65;
-    -webkit-font-smoothing:antialiased;
-  }
-
-  a{color:var(--indigo);}
-
-  .mono{
-    font-family:"SFMono-Regular","IBM Plex Mono","JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
-    letter-spacing:0.01em;
-  }
-
-  /* ---------- Header ---------- */
-  .hero{
-    padding:72px 24px 56px;
-    text-align:center;
-    background:
-      radial-gradient(480px 220px at 50% -60px, rgba(74,89,250,0.14), transparent 70%),
-      var(--paper);
-    border-bottom:1px solid var(--border);
-  }
-  .badge{
-    width:64px;height:64px;
-    margin:0 auto 22px;
-    border-radius:18px;
-    background:linear-gradient(135deg,var(--indigo),var(--violet));
-    display:flex;align-items:center;justify-content:center;
-    box-shadow:0 10px 26px rgba(74,89,250,0.35);
-  }
-  .badge svg{width:30px;height:30px;}
-  .hero h1{
-    font-size:clamp(28px,4vw,40px);
-    font-weight:800;
-    margin:0 0 10px;
-    letter-spacing:-0.02em;
-  }
-  .hero p.sub{
-    color:var(--muted);
-    font-size:15px;
-    margin:0 0 18px;
-  }
-  .meta-row{
-    display:inline-flex;gap:10px;flex-wrap:wrap;justify-content:center;
-    font-size:12.5px;color:var(--faint);
-  }
-  .meta-pill{
-    background:var(--indigo-soft);
-    color:var(--indigo);
-    padding:5px 12px;
-    border-radius:100px;
-    font-weight:600;
-  }
-
-  /* ---------- Layout ---------- */
-  .layout{
-    max-width:1040px;
-    margin:0 auto;
-    padding:48px 24px 100px;
-    display:grid;
-    grid-template-columns:220px 1fr;
-    gap:48px;
-    align-items:start;
-  }
-  @media (max-width: 820px){
-    .layout{grid-template-columns:1fr; gap:28px;}
-    nav.toc{position:static !important; order:2;}
-  }
-
-  nav.toc{
-    position:sticky;
-    top:32px;
-    display:flex;
-    flex-direction:column;
-    border-left:2px dotted var(--border);
-    padding-left:18px;
-  }
-  nav.toc a{
-    display:block;
-    color:var(--muted);
-    text-decoration:none;
-    font-size:13.5px;
-    padding:7px 0;
-    position:relative;
-  }
-  nav.toc a .num{
-    font-family:"SFMono-Regular",ui-monospace,Menlo,Consolas,monospace;
-    color:var(--faint);
-    margin-right:8px;
-    font-size:11.5px;
-  }
-  nav.toc a:hover{color:var(--indigo);}
-  nav.toc a.active{color:var(--indigo); font-weight:700;}
-  nav.toc a.active::before{
-    content:"";
-    position:absolute;left:-19.5px;top:10px;
-    width:7px;height:7px;border-radius:50%;
-    background:var(--indigo);
-  }
-
-  main{min-width:0;}
-
-  .card{
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:var(--radius);
-    padding:30px 34px;
-    margin-bottom:20px;
-  }
-  .card.intro{
-    background:linear-gradient(180deg, var(--indigo-soft), var(--card) 65%);
-  }
-
-  section{scroll-margin-top:24px;}
-
-  section h2{
-    display:flex;
-    align-items:baseline;
-    gap:12px;
-    font-size:19px;
-    font-weight:800;
-    letter-spacing:-0.01em;
-    margin:0 0 14px;
-  }
-  section h2 .idx{
-    font-family:"SFMono-Regular",ui-monospace,Menlo,Consolas,monospace;
-    font-size:13px;
-    font-weight:600;
-    color:var(--indigo);
-    background:var(--indigo-soft);
-    padding:3px 8px;
-    border-radius:7px;
-  }
-
-  section p, section li{
-    color:#374151;
-    font-size:15px;
-  }
-  section ul{padding-left:20px; margin:10px 0;}
-  section li{margin:6px 0;}
-  section p{margin:0 0 12px;}
-
-  .callout{
-    border-left:3px solid var(--indigo);
-    background:var(--indigo-soft);
-    border-radius:0 12px 12px 0;
-    padding:14px 18px;
-    font-size:13.5px;
-    color:#3a3f8f;
-    margin:16px 0 4px;
-  }
-
-  table.data-table{
-    width:100%;
-    border-collapse:collapse;
-    margin:14px 0 6px;
-    font-size:13.5px;
-  }
-  table.data-table th, table.data-table td{
-    text-align:left;
-    padding:10px 12px;
-    border-bottom:1px solid var(--border);
-  }
-  table.data-table th{
-    color:var(--faint);
-    font-family:"SFMono-Regular",ui-monospace,Menlo,Consolas,monospace;
-    font-weight:600;
-    font-size:11.5px;
-    text-transform:uppercase;
-    letter-spacing:0.04em;
-  }
-
-  /* ---------- Footer / tear-off ---------- */
-  .tearoff{
-    max-width:1040px;
-    margin:0 auto;
-    padding:0 24px 60px;
-  }
-  .tearoff .receipt{
-    border-top:2px dashed var(--border);
-    padding-top:26px;
-    display:flex;
-    flex-wrap:wrap;
-    gap:24px;
-    justify-content:space-between;
-    align-items:center;
-    color:var(--faint);
-    font-size:12.5px;
-  }
-  .tearoff a{color:var(--indigo); font-weight:600; text-decoration:none;}
-  .tearoff a:hover{text-decoration:underline;}
-</style>
+<title>Privacy Policy — Daily Expenses</title>
+<meta name="description" content="How the Daily Expenses iPhone app handles your information: your financial data stays on your device, with no account or cloud sync.">
+<meta name="theme-color" content="#0b0d12">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/css/site.css">
+<script>try{var t=localStorage.getItem("de-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-  <header class="hero">
-    <div class="badge">
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M4 19V9M12 19V5M20 19v-6" stroke="white" stroke-width="2.4" stroke-linecap="round"/>
-      </svg>
-    </div>
-    <h1>Privacy Policy</h1>
-    <p class="sub">How DailyExpences handles your information</p>
-    <div class="meta-row">
-      <span class="meta-pill mono">Effective [Month DD, YYYY]</span>
-      <span class="meta-pill mono">v1.0</span>
-    </div>
-  </header>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="assets/img/icon-512.png" alt="">Daily Expenses</a>
+    <button class="menu-btn" aria-label="Menu" aria-expanded="false"></button>
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="support.html">Support</a>
+      <button class="theme-btn" type="button" aria-label="Toggle theme"></button>
+      <a class="btn btn-primary btn-small" href="index.html#download">Get the app</a>
+    </nav>
+  </div>
+</header>
 
-  <div class="layout">
-    <nav class="toc" aria-label="Table of contents">
+<main id="main">
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Legal</span>
+      <h1>Privacy Policy</h1>
+      <p>How Daily Expenses handles your information</p>
+      <div class="legal-meta"><span>Effective September 28, 2026</span><span>v2.0</span></div>
+    </div>
+  </section>
+
+  <div class="wrap legal-layout">
+    <nav class="legal-toc" aria-label="Table of contents">
       <a href="#overview"><span class="num">01</span>Overview</a>
-      <a href="#collect"><span class="num">02</span>What We Collect</a>
+      <a href="#on-device"><span class="num">02</span>Data on Your Device</a>
       <a href="#not-collect"><span class="num">03</span>What We Don't Collect</a>
-      <a href="#storage"><span class="num">04</span>Where Data Lives</a>
-      <a href="#purchases"><span class="num">05</span>Purchases</a>
-      <a href="#notifications"><span class="num">06</span>Notifications</a>
-      <a href="#sharing"><span class="num">07</span>Sharing</a>
-      <a href="#retention"><span class="num">08</span>Retention &amp; Deletion</a>
-      <a href="#children"><span class="num">09</span>Children</a>
-      <a href="#changes"><span class="num">10</span>Changes</a>
-      <a href="#contact"><span class="num">11</span>Contact</a>
+      <a href="#ads"><span class="num">04</span>Advertising</a>
+      <a href="#diagnostics"><span class="num">05</span>Crash Diagnostics</a>
+      <a href="#purchases"><span class="num">06</span>Purchases</a>
+      <a href="#device-features"><span class="num">07</span>Face ID, Widgets &amp; Notifications</a>
+      <a href="#sharing"><span class="num">08</span>Exports &amp; Support Email</a>
+      <a href="#choices"><span class="num">09</span>Your Choices &amp; Rights</a>
+      <a href="#retention"><span class="num">10</span>Retention &amp; Deletion</a>
+      <a href="#children"><span class="num">11</span>Children</a>
+      <a href="#changes"><span class="num">12</span>Changes</a>
+      <a href="#contact"><span class="num">13</span>Contact</a>
     </nav>
 
-    <main>
-      <div class="card intro">
-        <p style="margin:0;">DailyExpences is built to track your spending — not you. This policy explains, in plain language, what information the app touches, where it's stored, and what stays entirely on your device.</p>
+    <div>
+      <div class="legal-card intro">
+        <p>Daily Expenses is built to track your spending, not you. You don't need an account, and your financial records are stored only on your iPhone. This policy explains in plain language what information the app uses, where it's stored, and what little leaves your device.</p>
       </div>
 
-      <div class="card">
-        <section id="overview">
-          <h2><span class="idx">§01</span>Overview</h2>
-          <p>This Privacy Policy applies to the DailyExpences iOS app ("the App"), developed by [Your Name / Studio Name] ("we," "us"). It describes how information is handled when you use the App. By using DailyExpences, you agree to the practices described here.</p>
-        </section>
-      </div>
+      <section class="legal-card" id="overview">
+        <h2><span class="idx">§01</span>Overview</h2>
+        <p>This Privacy Policy applies to the Daily Expenses iOS app and its widgets ("the App"), developed by Mobarak Hossen ("we," "us"). It also covers this website. By using the App, you agree to the practices described here.</p>
+        <p>In short:</p>
+        <ul>
+          <li>Your expenses, budgets and other records stay on your device. We don't run servers that receive them.</li>
+          <li>The free version shows ads from Google AdMob. Google may collect some device data to show and measure those ads, as described in <a href="#ads">§04</a>. Pro users don't see ads.</li>
+          <li>We only receive information from you if you choose to send it, for example by emailing us.</li>
+        </ul>
+      </section>
 
-      <div class="card">
-        <section id="collect">
-          <h2><span class="idx">§02</span>What We Collect</h2>
-          <p>DailyExpences is designed to work entirely on your device. The App creates and stores the following, all locally:</p>
-          <table class="data-table">
-            <tr><th>Category</th><th>Examples</th></tr>
-            <tr><td>Financial entries you add</td><td>Expenses, categories, monthly budgets, recurring expense templates</td></tr>
-            <tr><td>Optional records you add</td><td>Lend &amp; borrow entries, investment entries</td></tr>
-            <tr><td>App preferences</td><td>Currency, appearance, week-start day, notification settings</td></tr>
-            <tr><td>Purchase status</td><td>Whether you hold a Pro subscription or lifetime unlock, verified via Apple</td></tr>
+      <section class="legal-card" id="on-device">
+        <h2><span class="idx">§02</span>Data Stored on Your Device</h2>
+        <p>The App creates and stores the following on your device only, in a local database:</p>
+        <div class="legal-table-wrap">
+          <table class="legal-table">
+            <tr><th>Type</th><th>Examples</th></tr>
+            <tr><td>Financial entries you add</td><td>Expenses, categories, monthly and category budgets, recurring expenses, upcoming expenses</td></tr>
+            <tr><td>Other records you add</td><td>IOUs (people's names, amounts, dates, interest, notes) and investments</td></tr>
+            <tr><td>App preferences</td><td>Currency, appearance, first day of the week, notification and lock settings</td></tr>
+            <tr><td>In-app notification history</td><td>Past budget alerts, reminders and tips shown in the inbox</td></tr>
+            <tr><td>Purchase status</td><td>Whether you have Pro, as verified by Apple</td></tr>
+            <tr><td>Crash diagnostics</td><td>Technical crash and hang reports provided by iOS (see <a href="#diagnostics">§05</a>)</td></tr>
           </table>
-          <p>None of this requires creating an account, and none of it is tied to your name, email, or any other identifier — because we never ask for one.</p>
-        </section>
-      </div>
+        </div>
+        <p>None of this requires an account, and none of it is sent to us. The App doesn't sync to the cloud. If you use iCloud Backup or back up your iPhone to a computer, the App's data is included in that backup like any other app's data, under Apple's terms.</p>
+        <p>If you enter other people's names in IOUs, that information also stays on your device.</p>
+      </section>
 
-      <div class="card">
-        <section id="not-collect">
-          <h2><span class="idx">§03</span>What We Don't Collect</h2>
-          <ul>
-            <li>No account sign-up, email address, or password</li>
-            <li>No precise or approximate location data</li>
-            <li>No contacts, photos, or device identifiers beyond what Apple's App Store uses to process purchases</li>
-            <li>No third-party analytics or advertising SDKs at this time</li>
-          </ul>
-          <div class="callout">If a future version adds analytics, crash reporting, or ads, this policy will be updated first, and the change will be reflected in the version number above.</div>
-        </section>
-      </div>
+      <section class="legal-card" id="not-collect">
+        <h2><span class="idx">§03</span>What We Don't Collect</h2>
+        <ul>
+          <li>No sign-up, name, email address or password</li>
+          <li>No access to your contacts, photos, camera, microphone or precise location</li>
+          <li>No third-party analytics or tracking SDKs, apart from the advertising SDK described in §04</li>
+          <li>We never sell your data, and we never share your financial records with anyone</li>
+        </ul>
+      </section>
 
-      <div class="card">
-        <section id="storage">
-          <h2><span class="idx">§04</span>Where Data Lives</h2>
-          <p>All of your expense data is stored in a local database on your device (via Realm). It is not transmitted to our servers, because we don't operate any — DailyExpences does not sync your data to the cloud. If you use Apple's device backup (iCloud Backup / Finder backup), your App data may be included in that backup the same way any other app's data would be, subject to Apple's own policies.</p>
-        </section>
-      </div>
+      <section class="legal-card" id="ads">
+        <h2><span class="idx">§04</span>Advertising (Free Version)</h2>
+        <p>To keep the App free, the free version shows banner and full-screen ads from <b>Google AdMob</b>, a service of Google LLC. Pro users don't see ads, and the ad SDK doesn't load ads for them.</p>
+        <h3>What Google may collect</h3>
+        <p>To show ads, limit how often you see them, measure performance and prevent fraud, the Google Mobile Ads SDK may collect:</p>
+        <ul>
+          <li>Device information, such as model, iOS version, language and screen size</li>
+          <li>IP address, which may be used to estimate your general location (for example, your country)</li>
+          <li>Ad interactions, such as ad views and taps</li>
+          <li>Your device's advertising identifier (IDFA), <b>only if you allow tracking</b> (see below)</li>
+        </ul>
+        <p>This data goes directly from the SDK to Google. We don't receive it. Your expenses, budgets and other records are <b>never</b> shared with Google or any ad network. Google handles this data under its own policies: <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">How Google uses information from apps that use its services</a>.</p>
+        <h3>Tracking permission (App Tracking Transparency)</h3>
+        <p>Before iOS asks whether the App may track you, the App shows a short explanation first. If you choose <b>Allow</b>, Google can use your advertising identifier to show more relevant ads. If you choose <b>Ask App Not to Track</b>, the identifier isn't shared, and you may still see ads that are less personalized. You can change this any time in iPhone Settings → Privacy &amp; Security → Tracking.</p>
+        <h3>Consent in the EEA, UK and Switzerland</h3>
+        <p>Where the law requires it, the App uses Google's User Messaging Platform to ask for your consent before ads are personalized. You can review or change your choice at any time in the App under <b>Settings → Privacy Options</b>.</p>
+      </section>
 
-      <div class="card">
-        <section id="purchases">
-          <h2><span class="idx">§05</span>Purchases</h2>
-          <p>Subscriptions and one-time Pro purchases are processed entirely by Apple through StoreKit. We never see or store your payment details — Apple handles billing, receipts, and renewal, and manages that relationship directly with your Apple ID.</p>
-        </section>
-      </div>
+      <section class="legal-card" id="diagnostics">
+        <h2><span class="idx">§05</span>Crash Diagnostics</h2>
+        <p>The App uses Apple's MetricKit framework, not a third-party service, to receive crash and hang reports from iOS. These reports contain technical details, such as which part of the code failed and your device model and iOS version. They don't contain your expenses or other records.</p>
+        <p>The App keeps up to 20 of the most recent reports on your device. They are <b>only sent to us if you choose to share them</b>, using Settings → Export Diagnostic Reports. Separately, if you've turned on "Share with App Developers" in iPhone Settings → Privacy &amp; Security → Analytics &amp; Improvements, Apple may send anonymous crash data to us.</p>
+      </section>
 
-      <div class="card">
-        <section id="notifications">
-          <h2><span class="idx">§06</span>Notifications</h2>
-          <p>Budget alerts and spending-summary reminders are scheduled locally on your device based on your own data and settings. They are not sent from a remote server. You can turn them off any time in the App's Settings or in iOS Settings → Notifications.</p>
-        </section>
-      </div>
+      <section class="legal-card" id="purchases">
+        <h2><span class="idx">§06</span>Purchases</h2>
+        <p>Pro subscriptions and the Lifetime purchase are processed entirely by Apple through the App Store. We never see your payment details. The App asks Apple whether your Apple ID has an active purchase so it can turn on Pro features, and it may schedule a local reminder before a free trial ends.</p>
+      </section>
 
-      <div class="card">
-        <section id="sharing">
-          <h2><span class="idx">§07</span>Sharing</h2>
-          <p>We do not sell, rent, or share your data with third parties. Since your financial entries never leave your device, there is nothing for us to share in the first place.</p>
-        </section>
-      </div>
+      <section class="legal-card" id="device-features">
+        <h2><span class="idx">§07</span>Face ID, Widgets &amp; Notifications</h2>
+        <h3>Face ID / Touch ID</h3>
+        <p>App Lock and Feature Lock use Apple's LocalAuthentication framework. iOS does the check, and the App only learns whether it succeeded. The App never receives your face, fingerprint or passcode.</p>
+        <h3>Widgets</h3>
+        <p>To power the Home Screen and Lock Screen widgets, the App saves a small summary on your device (your recent expenses, budget and currency). Only the widgets can read it. It never leaves your device. Lock Screen widgets hide amounts until your iPhone is unlocked.</p>
+        <h3>Notifications</h3>
+        <p>Reminders, budget alerts, spending summaries and due-date reminders are created and scheduled on your device, based on your own data and settings. They aren't sent from a server. You can turn them off in the App's Settings or in iPhone Settings → Notifications.</p>
+      </section>
 
-      <div class="card">
-        <section id="retention">
-          <h2><span class="idx">§08</span>Retention &amp; Deletion</h2>
-          <p>Your data stays on your device for as long as the App is installed. Deleting DailyExpences from your device deletes its local database along with it. Because we don't hold a server-side copy, there is nothing further for us to delete on our end.</p>
-        </section>
-      </div>
+      <section class="legal-card" id="sharing">
+        <h2><span class="idx">§08</span>Exports &amp; Support Email</h2>
+        <p><b>Exports.</b> When you export CSV, PDF or Word files, or share an expense summary, the App creates the file on your device and opens the iOS share sheet. Where it goes next, whether Files, Mail or another app, is your choice and is subject to that service's privacy policy.</p>
+        <p><b>Support email.</b> If you contact us, we receive your email address, your message and anything you attach, such as screenshots or diagnostic reports. We use this only to reply to you and to fix problems, and we don't add you to any mailing list.</p>
+      </section>
 
-      <div class="card">
-        <section id="children">
-          <h2><span class="idx">§09</span>Children</h2>
-          <p>DailyExpences is not directed at children under 13, and we do not knowingly collect information from children. Since the App does not collect personal information from any user, this applies equally to users of all ages.</p>
-        </section>
-      </div>
+      <section class="legal-card" id="choices">
+        <h2><span class="idx">§09</span>Your Choices &amp; Rights</h2>
+        <ul>
+          <li><b>Ads:</b> change your tracking permission in iPhone Settings, review your ad consent in Settings → Privacy Options, or upgrade to Pro to remove ads.</li>
+          <li><b>Notifications:</b> turn any reminder on or off in the App or in iPhone Settings.</li>
+          <li><b>Access and export:</b> export all your data as CSV files at any time.</li>
+          <li><b>Deletion:</b> use Settings → Clear All Data, or delete the App.</li>
+        </ul>
+        <p>Depending on where you live (for example, the EU and UK under the GDPR, or California under the CCPA/CPRA), you may have rights to access, correct, delete or object to the processing of your personal data. Because your records stay on your device, you can exercise most of these rights directly in the App. For support emails you've sent us, contact us and we'll help. For data collected by Google for advertising, see Google's privacy controls at <a href="https://myadcenter.google.com" rel="noopener">myadcenter.google.com</a>.</p>
+      </section>
 
-      <div class="card">
-        <section id="changes">
-          <h2><span class="idx">§10</span>Changes to This Policy</h2>
-          <p>If this policy changes, the "Effective" date and version number at the top of this page will be updated. Material changes — such as introducing analytics, ads, or cloud sync — will be called out clearly rather than folded in silently.</p>
-        </section>
-      </div>
+      <section class="legal-card" id="retention">
+        <h2><span class="idx">§10</span>Retention &amp; Deletion</h2>
+        <p>Your data stays on your device until you delete it with Clear All Data or delete the App, which removes its local database and widget data. Copies in your own device backups follow your backup settings. We keep support emails only as long as needed to help you, and you can ask us to delete them at any time.</p>
+      </section>
 
-      <div class="card">
-        <section id="contact">
-          <h2><span class="idx">§11</span>Contact</h2>
-          <p>Questions about this policy or how the App works can be sent to:</p>
-          <p class="mono" style="font-size:15px;"><a href="mailto:support@dailyexpences.app">support@dailyexpences.app</a></p>
-        </section>
-      </div>
-    </main>
-  </div>
+      <section class="legal-card" id="children">
+        <h2><span class="idx">§11</span>Children</h2>
+        <p>The App isn't directed at children under 13, and we don't knowingly collect personal information from children. If you believe a child has sent us personal information, contact us and we'll delete it.</p>
+      </section>
 
-  <div class="tearoff">
-    <div class="receipt">
-      <span>DailyExpences · Privacy Policy</span>
-      <span><a href="terms-of-service.html">View Terms of Service →</a></span>
+      <section class="legal-card" id="changes">
+        <h2><span class="idx">§12</span>Changes to This Policy</h2>
+        <p>When this policy changes, we'll update the effective date and version number at the top of this page. Important changes, such as new data collection, cloud sync or a new third-party service, will be clearly described here before they take effect.</p>
+        <div class="legal-note"><b>What's new in v2.0:</b> added details on Google AdMob advertising, App Tracking Transparency and consent, MetricKit crash diagnostics, Face ID, widgets, exports and support email, which reflect features in the current App.</div>
+      </section>
+
+      <section class="legal-card" id="contact">
+        <h2><span class="idx">§13</span>Contact</h2>
+        <p>If you have questions about this policy or your data, email:</p>
+        <p style="font-family:var(--mono)"><a href="mailto:mobarak.cse.cou@gmail.com?subject=Daily%20Expenses%20Privacy">mobarak.cse.cou@gmail.com</a></p>
+        <div class="legal-next"><span>Daily Expenses · Privacy Policy</span><a href="terms.html">View Terms of Service →</a></div>
+      </section>
     </div>
   </div>
+</main>
 
-<script>
-  const links = document.querySelectorAll('nav.toc a');
-  const sections = Array.from(links).map(a => document.querySelector(a.getAttribute('href')));
-  const obs = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      const idx = sections.indexOf(entry.target);
-      if (idx === -1) return;
-      if (entry.isIntersecting) {
-        links.forEach(l => l.classList.remove('active'));
-        links[idx].classList.add('active');
-      }
-    });
-  }, { rootMargin: '-20% 0px -70% 0px' });
-  sections.forEach(s => s && obs.observe(s));
-</script>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <a class="brand" href="index.html"><img src="assets/img/icon-512.png" alt="">Daily Expenses</a>
+        <p>A simple, private expense and budget tracker for iPhone.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <ul><li><a href="features.html">Features</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="index.html#download">Download</a></li></ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul><li><a href="support.html">Support</a></li><li><a href="support.html#faq">FAQ</a></li><li><a href="mailto:mobarak.cse.cou@gmail.com">Email us</a></li></ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Service</a></li></ul>
+      </div>
+    </div>
+    <div class="legal-line">
+      <span>© <span data-year>2026</span> Mobarak Hossen. All rights reserved.</span>
+      <span>iPhone, Face ID and App Store are trademarks of Apple Inc.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js"></script>
 </body>
 </html>

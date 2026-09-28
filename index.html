@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Expenses — Budget &amp; Spending Tracker for iPhone</title>
+<meta name="description" content="Daily Expenses is a simple, private expense tracker for iPhone. Log spending in seconds, set monthly and category budgets, see clear charts, track bills, IOUs and investments — all stored on your device.">
+<meta name="theme-color" content="#0b0d12">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Daily Expenses — Track smarter. Spend better.">
+<meta property="og:description" content="A simple, private expense and budget tracker for iPhone. Your data stays on your device.">
+<meta property="og:image" content="assets/img/icon-512.png">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="assets/css/site.css">
+<script>try{var t=localStorage.getItem("de-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="assets/img/icon-512.png" alt="">Daily Expenses</a>
+    <button class="menu-btn" aria-label="Menu" aria-expanded="false"></button>
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="features.html">Features</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="support.html">Support</a>
+      <button class="theme-btn" type="button" aria-label="Toggle theme"></button>
+      <a class="btn btn-primary btn-small" href="#download">Get the app</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- Hero -->
+  <section class="hero-home">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">Personal finance for iPhone</span>
+        <h1>Track smarter.<br><em>Spend better.</em></h1>
+        <p class="lede">Daily Expenses makes logging spending take seconds. Set budgets that warn you before you overspend, see where your money goes, and keep every bill, IOU and investment in one private place.</p>
+        <div class="hero-actions">
+          <a class="btn btn-store" data-appstore href="#download">
+            <span data-icon="appstore"></span>
+            <span class="store-text"><small>Download on the</small><strong>App Store</strong></span>
+          </a>
+          <a class="btn btn-ghost" href="features.html">See all features <span data-icon="arrow"></span></a>
+        </div>
+        <ul class="hero-points">
+          <li><span data-icon="checkCircle"></span>Free to use</li>
+          <li><span data-icon="checkCircle"></span>No account needed</li>
+          <li><span data-icon="checkCircle"></span>Data stays on your iPhone</li>
+        </ul>
+      </div>
+
+      <div class="phone" role="img" aria-label="The Daily Expenses home screen showing today's and this month's spending, the monthly budget and recent transactions">
+        <div class="phone-screen">
+          <div class="ps-top">
+            <b>September</b>
+            <span><i class="ps-dot"><span data-icon="bell"></span></i><i class="ps-dot"><span data-icon="gear"></span></i></span>
+          </div>
+          <div class="ps-row">
+            <div class="ps-card"><div class="ps-label">Today</div><div class="ps-amt">$24.50</div><div class="ps-sub"><span>3 transactions</span></div></div>
+            <div class="ps-card"><div class="ps-label">This Month</div><div class="ps-amt">$742</div><div class="ps-sub"><span>28 transactions</span></div></div>
+          </div>
+          <div class="ps-card">
+            <div class="ps-label">Monthly Budget</div>
+            <div class="ps-amt">$458 <span style="font-size:11px;font-weight:600;color:#8b93a1">remaining</span></div>
+            <div class="ps-bar"><i></i></div>
+            <div class="ps-sub"><span>$742 spent</span><span>of $1,200</span></div>
+          </div>
+          <div class="ps-row">
+            <div class="ps-card ps-mini"><span class="ps-ic" style="background:rgba(140,89,250,.18);color:#a885ff"><span data-icon="swap"></span></span><div><div class="ps-label">IOUs</div><b style="color:#5fdcaa">+$140</b></div></div>
+            <div class="ps-card ps-mini"><span class="ps-ic" style="background:rgba(74,89,250,.2);color:#7d88ff"><span data-icon="trend"></span></span><div><div class="ps-label">Invest</div><b style="color:#5fdcaa">+6.2%</b></div></div>
+          </div>
+          <div class="ps-label" style="margin-top:4px">Recent transactions</div>
+          <div class="ps-card" style="padding:4px 11px">
+            <div class="ps-tx"><span class="ps-ic" style="background:rgba(255,149,0,.18);color:#ffa826"><span data-icon="cup"></span></span><div><b>Coffee</b><small>Food &amp; Drink · Today</small></div><span class="ps-neg">-$4.50</span></div>
+            <div class="ps-tx"><span class="ps-ic" style="background:rgba(51,184,133,.18);color:#5fdcaa"><span data-icon="cart"></span></span><div><b>Groceries</b><small>Groceries · Today</small></div><span class="ps-neg">-$18.20</span></div>
+            <div class="ps-tx"><span class="ps-ic" style="background:rgba(74,89,250,.2);color:#7d88ff"><span data-icon="car"></span></span><div><b>Uber</b><small>Transport · Yesterday</small></div><span class="ps-neg">-$8.40</span></div>
+          </div>
+          <div class="ps-fab"><span data-icon="plus"></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats strip -->
+  <section class="section" style="padding-bottom:0">
+    <div class="wrap">
+      <div class="stats reveal">
+        <div class="stat"><b>100%</b><span>of your data stored on your device</span></div>
+        <div class="stat"><b>0</b><span>accounts or sign-ups</span></div>
+        <div class="stat"><b>7</b><span>widget styles for Home &amp; Lock Screen</span></div>
+        <div class="stat"><b>5</b><span>currencies: USD, EUR, GBP, BDT, INR</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature overview -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Everything in one app</span>
+        <h2>More than an expense log</h2>
+        <p>Daily Expenses covers the money questions you actually ask: what did I spend, what's left, what's due, and who owes whom.</p>
+      </div>
+      <div class="fgrid">
+        <a class="fcard reveal" href="features.html#expenses">
+          <span class="ficon t-green"><span data-icon="plus"></span></span>
+          <h3>Fast expense logging</h3>
+          <p>Amount, category, done. Edit, duplicate or share any expense, and search your whole history.</p>
+          <span class="more">Learn more →</span>
+        </a>
+        <a class="fcard reveal" href="features.html#budgets">
+          <span class="ficon t-indigo"><span data-icon="target"></span></span>
+          <h3>Budgets that warn you</h3>
+          <p>A monthly budget, category budgets, and alerts when you reach the percentage you choose.</p>
+          <span class="more">Learn more →</span>
+        </a>
+        <a class="fcard reveal" href="features.html#statistics">
+          <span class="ficon t-pro"><span data-icon="pie"></span></span>
+          <h3>Clear statistics</h3>
+          <p>Weekly, monthly and yearly trends, category breakdowns, and a month-to-month comparison.</p>
+          <span class="more">Learn more →</span>
+        </a>
+        <a class="fcard reveal" href="features.html#upcoming">
+          <span class="ficon t-teal"><span data-icon="calendar"></span></span>
+          <h3>Upcoming &amp; recurring</h3>
+          <p>Plan future bills with reminders, and let subscriptions log themselves when they're due.</p>
+          <span class="more">Learn more →</span>
+        </a>
+        <a class="fcard reveal" href="features.html#ious">
+          <span class="ficon t-orange"><span data-icon="swap"></span></span>
+          <h3>People &amp; IOUs</h3>
+          <p>Track money you lent or borrowed, with due dates, reminders and optional interest.</p>
+          <span class="more">Learn more →</span>
+        </a>
+        <a class="fcard reveal" href="features.html#investments">
+          <span class="ficon t-gold"><span data-icon="trend"></span></span>
+          <h3>Investments</h3>
+          <p>Stocks, funds, crypto, gold, deposits and property, with your total gain or loss at a glance.</p>
+          <span class="more">Learn more →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Spotlights -->
+  <section class="section alt">
+    <div class="wrap">
+
+      <div class="split reveal">
+        <div>
+          <span class="eyebrow">Budgets</span>
+          <h3>Know what's left before you spend it</h3>
+          <p>Set one number for the month, then split it across categories. Daily Expenses shows what's left and tells you what hasn't been assigned to a category yet.</p>
+          <ul class="checks">
+            <li><span data-icon="check"></span>Budgets for the whole month and for each category</li>
+            <li><span data-icon="check"></span>Alerts at the percentage you pick, e.g. 80%</li>
+            <li><span data-icon="check"></span>Set a different alert level for any category <span class="pro-tag">PRO</span></li>
+          </ul>
+        </div>
+        <div class="split-visual">
+          <div class="panel">
+            <div class="budget-top"><span class="eyebrow" style="color:var(--muted)">Monthly budget</span><span style="color:var(--muted);font-size:14px">September</span></div>
+            <div class="budget-top" style="margin-top:6px"><b>$864 <span style="font-size:15px;color:var(--muted);font-weight:600">of $1,200</span></b><span style="color:var(--green-ink);font-weight:700">$336 left</span></div>
+            <div class="budget-track"><i></i></div>
+            <div class="budget-note"><span>72% used</span><span>Alert at 80%</span></div>
+            <div style="margin-top:18px">
+              <div class="cat-row"><span class="ficon t-orange"><span data-icon="cup"></span></span><span class="name">Food &amp; Drink</span><span class="track"><i style="width:82%;background:#ff9500"></i></span><span class="amt">$287</span></div>
+              <div class="cat-row"><span class="ficon t-green"><span data-icon="cart"></span></span><span class="name">Groceries</span><span class="track"><i style="width:64%;background:var(--green)"></i></span><span class="amt">$192</span></div>
+              <div class="cat-row"><span class="ficon t-indigo"><span data-icon="car"></span></span><span class="name">Transport</span><span class="track"><i style="width:48%;background:var(--indigo)"></i></span><span class="amt">$72</span></div>
+            </div>
+            <div class="alert-toast">
+              <span class="ficon t-red"><span data-icon="bell"></span></span>
+              <div><b>Budget alert</b><span>Food &amp; Drink has used 82% of its budget, with $63 left this month.</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="split flip reveal">
+        <div>
+          <span class="eyebrow">Statistics</span>
+          <h3>See your spending patterns</h3>
+          <p>Switch between week, month and year to see how your spending changes over time and which categories take the most.</p>
+          <ul class="checks">
+            <li><span data-icon="check"></span>Spending trend chart and category breakdown</li>
+            <li><span data-icon="check"></span>Total spent and average per day</li>
+            <li><span data-icon="check"></span>Year view, past years, full rankings and month-to-month comparison <span class="pro-tag">PRO</span></li>
+            <li><span data-icon="check"></span>Export a PDF report <span class="pro-tag">PRO</span></li>
+          </ul>
+        </div>
+        <div class="split-visual">
+          <div class="panel">
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+              <div><div class="eyebrow" style="color:var(--muted)">Total spent</div><b style="font-size:28px;letter-spacing:-.03em">$316.40</b></div>
+              <div class="seg"><span class="on">Week</span><span>Month</span><span>Year</span></div>
+            </div>
+            <div class="bars" aria-hidden="true">
+              <i style="height:38%"></i><i style="height:62%"></i><i style="height:45%"></i><i class="hi" style="height:92%"></i><i style="height:30%"></i><i style="height:70%"></i><i style="height:52%"></i>
+            </div>
+            <div class="bar-labels"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px">
+              <div class="stat" style="padding:14px"><span>Avg / day</span><b style="font-size:22px">$45.20</b></div>
+              <div class="stat" style="padding:14px"><span>Vs. last month</span><b style="font-size:22px;color:var(--green-ink)">−12%</b></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="split reveal">
+        <div>
+          <span class="eyebrow">Widgets</span>
+          <h3>Your spending at a glance, even when the phone is locked</h3>
+          <p>Home Screen and Lock Screen widgets show how much you can still spend today and whether you're on pace for the month. Add an expense straight from the Lock Screen with one tap.</p>
+          <ul class="checks">
+            <li><span data-icon="check"></span>Small, medium and large Home Screen widgets</li>
+            <li><span data-icon="check"></span>Circular, rectangular and inline Lock Screen widgets</li>
+            <li><span data-icon="check"></span>A Quick Add button for the Lock Screen</li>
+            <li><span data-icon="check"></span>Amounts are hidden on the Lock Screen until you unlock</li>
+          </ul>
+        </div>
+        <div class="split-visual">
+          <div class="widgets" aria-hidden="true">
+            <div class="w-small">
+              <span class="ps-label">Left today</span>
+              <b>$27.40</b>
+              <div class="ps-bar"><i style="width:58%"></i></div>
+              <div class="ps-sub"><span>$420 left this month</span></div>
+            </div>
+            <div class="w-lock">
+              <div class="clock">9:41</div>
+              <div class="accs">
+                <div class="w-circ">$27<br>LEFT</div>
+                <div class="w-circ plus"><span data-icon="plus"></span></div>
+              </div>
+              <div class="w-inline">$27 left today</div>
+            </div>
+            <div class="w-medium">
+              <div>
+                <span class="ps-label">Left today</span>
+                <b style="display:block">$27.40</b>
+                <span style="font-size:12px;color:#5fdcaa;font-weight:700">On track</span>
+                <div class="ps-bar"><i style="width:58%"></i></div>
+              </div>
+              <div>
+                <span class="ps-label">This week</span>
+                <div class="wk"><i style="height:40%"></i><i style="height:75%"></i><i style="height:55%"></i><i style="height:90%"></i><i style="height:30%"></i><i class="off" style="height:12%"></i><i class="off" style="height:12%"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- More features -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Small things that matter</span>
+        <h2>Made for everyday use</h2>
+      </div>
+      <div class="fgrid">
+        <div class="fcard reveal"><span class="ficon t-green"><span data-icon="bell"></span></span><h3>Useful reminders</h3><p>A daily reminder at the time you choose, plus weekly and monthly spending summaries.</p></div>
+        <div class="fcard reveal"><span class="ficon t-indigo"><span data-icon="download"></span></span><h3>Export your data</h3><p>Export everything as CSV for free, or create PDF and Word reports with Pro.</p></div>
+        <div class="fcard reveal"><span class="ficon t-pro"><span data-icon="face"></span></span><h3>Face ID lock <span class="pro-tag">PRO</span></h3><p>Lock the whole app, or only the screens you choose, with Face ID, Touch ID or your passcode.</p></div>
+        <div class="fcard reveal"><span class="ficon t-teal"><span data-icon="search"></span></span><h3>Search &amp; filters</h3><p>Find any expense by title or category, and filter by month, year or category.</p></div>
+        <div class="fcard reveal"><span class="ficon t-gold"><span data-icon="globe"></span></span><h3>Your currency</h3><p>USD, EUR, GBP, BDT or INR, plus light and dark mode and your choice of first day of the week.</p></div>
+        <div class="fcard reveal"><span class="ficon t-orange"><span data-icon="palette"></span></span><h3>Your categories</h3><p>Create categories with your own name, icon and color, each with an optional budget.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Privacy -->
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="privacy-band reveal">
+        <div>
+          <span class="eyebrow">Private by design</span>
+          <h2>Your finances stay on your iPhone</h2>
+          <p>There's no account to create and no server holding your data. Your expenses, budgets and notes are stored on your device, and you can export or delete them whenever you want.</p>
+          <p style="margin-top:14px"><a href="privacy-policy.html">Read the privacy policy →</a></p>
+        </div>
+        <ul>
+          <li><span data-icon="shield"></span>No sign-up, email or password</li>
+          <li><span data-icon="phone"></span>Data stored on your device, not in the cloud</li>
+          <li><span data-icon="eyeOff"></span>Lock Screen widgets hide amounts until you unlock</li>
+          <li><span data-icon="lock"></span>Optional Face ID or passcode lock</li>
+          <li><span data-icon="download"></span>Export all your data as CSV at any time</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing teaser -->
+  <section class="section alt">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Free, with an optional Pro upgrade</span>
+        <h2>Start free. Upgrade if you want more.</h2>
+        <p>Expenses, budgets, widgets, reminders and CSV export are free. Pro adds advanced statistics, reports and security, and removes ads.</p>
+      </div>
+      <div class="fgrid" style="max-width:900px;margin:0 auto;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))">
+        <div class="fcard reveal"><span class="ficon t-green"><span data-icon="wallet"></span></span><h3>Free</h3><p>Everything you need to track daily spending and stay on budget, supported by a few ads.</p></div>
+        <div class="fcard reveal" style="border:2px solid var(--pro)"><span class="ficon t-pro"><span data-icon="crown"></span></span><h3>Pro</h3><p>Monthly, yearly (with a free trial) or a one-time lifetime purchase.</p><a class="more" href="pricing.html" style="text-decoration:none">Compare plans →</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <span class="eyebrow">FAQ</span>
+        <h2>Common questions</h2>
+      </div>
+      <div class="faq">
+        <details><summary>Is Daily Expenses free?</summary><div><p>Yes. Logging expenses, budgets, categories, recurring expenses, widgets, reminders and CSV export are free. Pro is an optional upgrade that removes ads and adds extra features.</p></div></details>
+        <details><summary>Do I need an account?</summary><div><p>No. There's no sign-up. Open the app and start logging.</p></div></details>
+        <details><summary>Where is my data stored?</summary><div><p>On your iPhone, in the app's local database. It isn't uploaded to our servers. It's included in your regular iCloud or computer backup like any other app's data.</p></div></details>
+        <details><summary>Can I get my data out?</summary><div><p>Yes. Settings → Export Data creates CSV files for your expenses, categories, recurring expenses, IOUs, investments and upcoming expenses. Pro users can also export PDF and Word reports.</p></div></details>
+        <details><summary>Which currencies are supported?</summary><div><p>US Dollar, Euro, British Pound, Bangladeshi Taka and Indian Rupee. You can change the currency in Settings.</p></div></details>
+      </div>
+      <p style="text-align:center;margin-top:28px"><a href="support.html">More questions and support →</a></p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta alt section" id="download">
+    <div class="wrap">
+      <img src="assets/img/icon-512.png" alt="Daily Expenses app icon">
+      <h2>Start tracking today</h2>
+      <p>Free to use, with no account needed. Available for iPhone.</p>
+      <div class="hero-actions">
+        <a class="btn btn-store" data-appstore href="#download">
+          <span data-icon="appstore"></span>
+          <span class="store-text"><small>Download on the</small><strong>App Store</strong></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <a class="brand" href="index.html"><img src="assets/img/icon-512.png" alt="">Daily Expenses</a>
+        <p>A simple, private expense and budget tracker for iPhone.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <ul><li><a href="features.html">Features</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="index.html#download">Download</a></li></ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul><li><a href="support.html">Support</a></li><li><a href="support.html#faq">FAQ</a></li><li><a href="mailto:mobarak.cse.cou@gmail.com">Email us</a></li></ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Service</a></li></ul>
+      </div>
+    </div>
+    <div class="legal-line">
+      <span>© <span data-year>2026</span> Mobarak Hossen. All rights reserved.</span>
+      <span>iPhone, Face ID and App Store are trademarks of Apple Inc.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js"></script>
+</body>
+</html>
